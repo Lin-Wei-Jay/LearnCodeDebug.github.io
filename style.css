@@ -67,10 +67,10 @@ span {
 
 @keyframes title_move{
   from {
-    top: 0px;
+    bottom: 0px;
   }
   to {
-    top: 30px;
+    bottom: 30px;
   }
 }
 
