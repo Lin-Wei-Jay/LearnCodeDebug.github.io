@@ -7,15 +7,12 @@
   font-display: swap;
 }
 
-pre>code {
+code {
   font-family: "JetBrains Mono";
+  display: block;
 }
 
-#open {
-  font-size: 7vw;
-}
-
-.shape-ex1 {
+.shape {
   margin: 0 auto;
   animation: fade 2s linear 0s 1;
 }
@@ -27,5 +24,19 @@ pre>code {
 
   to {
     opacity: 1;
+  }
+}
+
+.shape-out{
+  margin: 0 auto;
+  animation: fadeOut 2s linear 0s infinite;
+}
+
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
   }
 }

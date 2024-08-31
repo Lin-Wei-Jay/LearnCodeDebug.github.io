@@ -2,18 +2,23 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.css">
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.js"></script>
-  <script>hljs.highlightAll();</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.js"></script>
+    <script src="script.js"></script>
+    <script>hljs.highlightAll();</script>
 </head>
 
 <body style="background-color:#0D1117">
-  <embed src="./bgm.mp3" autostart="true" loop="true">
-  <div id="open" class="shape-ex1">
-    <pre><code class="language-java">int i</code></pre>
-  </div>
+    <div class="shape" style="font-size: 3vw;">
+        <pre><code class="language-java">在Java語言當中，";"等價為句號</code></pre>
+    </div>
+    <script>
+        setTimeout(function () {
+            document.location.href = document.location.href.replace("index.html", "pages/").concat("1.html");
+        }, 5000);
+    </script>
 </body>
 
 </html>
