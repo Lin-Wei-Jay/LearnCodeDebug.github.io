@@ -16,7 +16,8 @@
     </div>
     <script>
         setTimeout(function () {
-            document.location.href = document.location.href.replace("index.html", "pages/").concat("1.html");
+            var has = document.location.href.includes("index.html");
+            document.location.href = document.location.href.replace("index.html", "").concat(has ? "/" : "").concat("pages/1.html");
         }, 5000);
     </script>
 </body>
