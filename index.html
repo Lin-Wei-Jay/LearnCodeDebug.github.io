@@ -3,10 +3,9 @@
 
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.js"></script>
-    <script src="script.js"></script>
     <script>hljs.highlightAll();</script>
 </head>
 
@@ -15,9 +14,23 @@
         <pre><code class="language-java">在Java語言當中，";"等價為句號</code></pre>
     </div>
     <script>
-        setTimeout(function () {
-            var has = document.location.href.includes("index.html");
-            document.location.href = document.location.href.replace("index.html", "").concat(has ? "/" : "").concat("pages/1.html");
+        setTimeout(() => {
+            document.body.innerHTML = "";
+
+            var audio = document.createElement("audio");
+            audio.autoplay = true;
+            audio.src = "./bgm.mp3";
+            audio.loop = true;
+            document.body.appendChild(audio);
+
+            var div = document.createElement("div");
+            div.className = "shape";
+            div.style.fontSize = "7vw";
+            div.id = "open";
+            div.innerHTML = "<pre><code class=\"language-java\">int i</code></pre>";
+            document.body.appendChild(div);
+
+            hljs.highlightAll();
         }, 5000);
     </script>
 </body>

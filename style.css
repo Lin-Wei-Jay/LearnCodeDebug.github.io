@@ -9,11 +9,12 @@
 
 code {
   font-family: "JetBrains Mono";
-  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .shape {
-  margin: 0 auto;
   animation: fade 2s linear 0s 1;
 }
 
