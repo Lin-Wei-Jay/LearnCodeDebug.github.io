@@ -24,7 +24,7 @@
             div.innerHTML = "<pre><code class=\"language-java\" contenteditable=\"true\" id=\"java\">int i</code></pre>";
             document.body.appendChild(div);
 
-            const example = document.getElementById("java")
+            const example = document.querySelector("code")
             example.addEventListener("keydown", e => {
                 if (e.keyCode != 186 || example.innerText !== "int i") {
                     e.preventDefault();
@@ -32,7 +32,6 @@
                     hljs.highlightAll();
                 }
             });
-
 
             hljs.highlightAll();
         }, 50);
