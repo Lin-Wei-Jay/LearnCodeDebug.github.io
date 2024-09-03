@@ -12,6 +12,7 @@ code {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  outline: none;
 }
 
 .shape {
@@ -28,16 +29,17 @@ code {
   }
 }
 
-.shape-out{
+.shape-out {
   margin: 0 auto;
   animation: fadeOut 2s linear 0s infinite;
 }
 
 @keyframes fadeOut {
   from {
-      opacity: 1;
+    opacity: 1;
   }
+
   to {
-      opacity: 0;
+    opacity: 0;
   }
 }

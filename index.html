@@ -17,22 +17,25 @@
         setTimeout(() => {
             document.body.innerHTML = "";
 
-            var audio = document.createElement("audio");
-            audio.autoplay = true;
-            audio.controls = true;
-            audio.src = "./bgm.mp3";
-            audio.loop = true;
-            document.body.appendChild(audio);
-
             var div = document.createElement("div");
             div.className = "shape";
             div.style.fontSize = "7vw";
             div.id = "open";
-            div.innerHTML = "<pre><code class=\"language-java\">int i</code></pre>";
+            div.innerHTML = "<pre><code class=\"language-java\" contenteditable=\"true\" id=\"java\">int i</code></pre>";
             document.body.appendChild(div);
 
+            const example = document.getElementById("java")
+            example.addEventListener("keydown", e => {
+                if (e.keyCode != 186 || example.innerText !== "int i") {
+                    e.preventDefault();
+                } else {
+                    hljs.highlightAll();
+                }
+            });
+
+
             hljs.highlightAll();
-        }, 5000);
+        }, 50);
     </script>
 </body>
 
