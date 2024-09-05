@@ -7,6 +7,15 @@
   font-display: swap;
 }
 
+#flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#flex-container > .flex-item {
+  flex: auto;
+}
+
 code {
   font-family: "JetBrains Mono";
   position: absolute;
