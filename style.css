@@ -9,19 +9,29 @@
 
 #flex-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: center;
+  align-items: center;
+  justify-content: center;
 }
 
 #flex-container > .flex-item {
   flex: auto;
 }
 
+.line-break {
+  width: 100%;
+}
+
 code {
   font-family: "JetBrains Mono";
+  outline: none;
+}
+
+.center {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
-  outline: none;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
 }
 
 .shape {

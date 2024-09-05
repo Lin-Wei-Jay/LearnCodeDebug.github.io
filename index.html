@@ -4,7 +4,7 @@
 <head>
     <title>Learn Code: Master Programming with Ease</title>
     <meta name="description" content="Learn Code: Discover, learn, and master coding skills with engaging tutorials and practical exercises. Your journey to coding excellence starts here." />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.css">
+    <link rel="stylesheet" href="./github-dark.css">
     <link rel="stylesheet" href="./style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.js"></script>
@@ -20,6 +20,8 @@
         <div class="shape" style="font-size: 3vw;" id="flex-item">
             <pre><code class="language-java">在Java語言當中，";"等價為句號</code></pre>
         </div>
+    </div>
+    <div id="flex-container">
         <div class="shape" style="font-size: 3vw;" id="flex-item">
             <pre><code class="language-java">Hello!</code></pre>
         </div>
@@ -29,7 +31,7 @@
             document.body.innerHTML = "";
 
             var div = document.createElement("div");
-            div.className = "shape";
+            div.className = "shape center";
             div.style.fontSize = "7vw";
             div.id = "open";
             div.innerHTML = "<pre><code class=\"language-java\" contenteditable=\"true\" id=\"java\">int i</code></pre>";
@@ -45,7 +47,7 @@
             });
 
             hljs.highlightAll();
-        }, 50);
+        }, 5000);
     </script>
 </body>
 
