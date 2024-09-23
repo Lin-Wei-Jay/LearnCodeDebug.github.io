@@ -7,35 +7,50 @@
   font-display: swap;
 }
 
-#flex-container {
-  display: flex;
-  flex-direction: center;
-  align-items: center;
-  justify-content: center;
-}
-
-#flex-container > .flex-item {
-  flex: auto;
-}
-
-.line-break {
-  width: 100%;
-}
-
 code {
   font-family: "JetBrains Mono";
-  outline: none;
+
+  /* 淡入*/
+  animation: fade 2s linear 0s 1;
+}
+
+warp {
+  white-space: wrap;
+}
+
+say {
+  white-space: normal;
+  margin-left: 10rpx;
+  font-size: 30rpx;
+  background-image: -webkit-linear-gradient(45deg, #00a0e9, #10d39d, #00a0e9, #10d39d);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 100%;
+  font-family: "JetBrains Mono";
+
+  /* 淡入*/
+  animation: fade 2s linear 0s 1, masked-animation 4s linear infinite;
+}
+
+@keyframes masked-animation {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: -100% 0;
+  }
 }
 
 .center {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  /* 置中 */
   top: 50%;
-}
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
 
-.shape {
-  animation: fade 2s linear 0s 1;
+  /* 防止元素被壓縮 */
+  white-space: nowrap;
 }
 
 @keyframes fade {
@@ -45,20 +60,5 @@ code {
 
   to {
     opacity: 1;
-  }
-}
-
-.shape-out {
-  margin: 0 auto;
-  animation: fadeOut 2s linear 0s infinite;
-}
-
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
   }
 }

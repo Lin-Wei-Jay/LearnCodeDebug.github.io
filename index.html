@@ -3,51 +3,50 @@
 
 <head>
     <title>Learn Code: Master Programming with Ease</title>
-    <meta name="description" content="Learn Code: Discover, learn, and master coding skills with engaging tutorials and practical exercises. Your journey to coding excellence starts here." />
-    <link rel="stylesheet" href="./github-dark.css">
-    <link rel="stylesheet" href="./style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.js"></script>
-    <script>hljs.highlightAll();</script>
+    <meta name="description"
+        content="Learn Code: Discover, learn, and master coding skills with engaging tutorials and practical exercises. Your journey to coding excellence starts here." />
     <meta property="og:image" content="https://github.com/LearnCodeDebug/LearnCodeDebug.github.io/blob/main/logo.jpg">
     <meta property="og:url" content="LearnCodeDebug.github.io">
     <meta property="og:title" content="Learn Code: Master Programming with Ease">
-    <meta property="og:description" content="Learn Code: Discover, learn, and master coding skills with engaging tutorials and practical exercises. Your journey to coding excellence starts here.">
+    <meta property="og:description"
+        content="Learn Code: Discover, learn, and master coding skills with engaging tutorials and practical exercises. Your journey to coding excellence starts here.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hightlight.css">
+    <script src="script.js"></script>
 </head>
 
-<body style="background-color:#0D1117">
-    <div id="flex-container">
-        <div class="shape" style="font-size: 3vw;" id="flex-item">
-            <pre><code class="language-java">在Java語言當中，";"等價為句號</code></pre>
-        </div>
-    </div>
-    <div id="flex-container">
-        <div class="shape" style="font-size: 3vw;" id="flex-item">
-            <pre><code class="language-java">Hello!</code></pre>
-        </div>
+<!-- code換行會被當成空格，&emsp為Tab (4 Space) -->
+<!-- 為了不要被識別為空格，會放在同一行 -->
+
+<body style="background-color:#2b2b2b">
+    <div class="center" style="font-size: 8vw;">
+        <say>Welcome!</say>
     </div>
     <script>
-        setTimeout(() => {
-            document.body.innerHTML = "";
-
-            var div = document.createElement("div");
-            div.className = "shape center";
-            div.style.fontSize = "7vw";
-            div.id = "open";
-            div.innerHTML = "<pre><code class=\"language-java\" contenteditable=\"true\" id=\"java\">int i</code></pre>";
-            document.body.appendChild(div);
-
-            const example = document.querySelector("code")
-            example.addEventListener("keydown", e => {
-                if (e.keyCode != 186 || example.innerText !== "int i") {
-                    e.preventDefault();
-                } else {
-                    hljs.highlightAll();
-                }
-            });
-
-            hljs.highlightAll();
-        }, 5000);
+        rep(Object.assign(document.createElement("div"), {
+            className: "center", style: "font-size: 9vw;", innerHTML: "<say>See Java Access Modifiers!</say>"
+        }), 3);
+        rep(Object.assign(document.createElement("code"), {
+            className: "center", style: "font-size: 9vw;", innerHTML: "<keyword><warp>public private default protected</warp></keyword>"
+        }), 6);
+        rep(Object.assign(document.createElement("div"), {
+            className: "center", style: "font-size: 9vw;", innerHTML: "<say>See Java Return Value!</say>"
+        }), 9);
+        rep(Object.assign(document.createElement("code"), {
+            className: "center", style: "font-size: 6vw;", innerHTML: "<keyword><warp>byte short int long float double boolean char Object</warp></keyword>"
+        }), 12);
+        rep(Object.assign(document.createElement("code"), {
+            className: "center", style: "font-size: 3vw;", innerHTML: `
+            <keyword>public final class<word> Main {</word></keyword>
+            <br>
+            <tab><keyword>public static void<name> main<word>(String[] args) {</name></word></keyword></tab>
+            <br>
+            <tab><tab><word>System.<field>out<word>.println(<string>"Hello World!"<word>)<semicolon>;</semicolon></field></word></word></string></word></tab></tab>
+            <br>
+            <tab><word>}</word></tab>
+            <br>
+            <word>}</word>`
+        }), 15);
     </script>
 </body>
 

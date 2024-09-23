@@ -1,0 +1,102 @@
+@mixin text-neonsign($parent, $color, $weight, $style, $background-color) {
+    #{$parent} {
+        text-decoration: none;
+        color: $color;
+        font-weight: $weight;
+        font-style: $style;
+        background-color: $background-color;
+        transition: all 0.5s;
+        text-shadow: 0 0 5px darken($color, 1%),
+            0 0 10px darken($color, 0.5%);
+    }
+
+    #{$parent}:hover,
+    #{$parent}:focus {
+        color: $color;
+        font-weight: $weight;
+        font-style: $style;
+        background-color: $background-color;
+        text-shadow: 0 0 5px lighten($color, 10%),
+            0 0 10px lighten($color, 8%);
+    }
+}
+
+/*
+    Theme: GitHub Dark
+    Description: Dark theme as seen on github.com
+    Author: github.com
+    Maintainer: @Hirse
+    Updated: 2021-05-15
+
+    Outdated base version: https://github.com/primer/github-syntax-dark
+    Current colors taken from GitHub's CSS
+*/
+@include text-neonsign(".hljs", #c9d1d9, normal, normal, transparent);
+
+/* prettylights-syntax-keyword */
+@include text-neonsign(".hljs-doctag", #ff7b72, normal, normal, transparent);
+@include text-neonsign(".hljs-keyword", #ff7b72, normal, normal, transparent);
+@include text-neonsign(".hljs-meta .hljs-keyword", #ff7b72, normal, normal, transparent);
+@include text-neonsign(".hljs-template-tag", #ff7b72, normal, normal, transparent);
+@include text-neonsign(".hljs-template-variable", #ff7b72, normal, normal, transparent);
+@include text-neonsign(".hljs-type", #ff7b72, normal, normal, transparent);
+@include text-neonsign(".hljs-variable.language_", #ff7b72, normal, normal, transparent);
+
+/* prettylights-syntax-entity */
+@include text-neonsign(".hljs-title", #d2a8ff, normal, normal, transparent);
+@include text-neonsign(".hljs-title.class_", #d2a8ff, normal, normal, transparent);
+@include text-neonsign(".hljs-title.class_.inherited__", #d2a8ff, normal, normal, transparent);
+@include text-neonsign(".hljs-title.function_", #d2a8ff, normal, normal, transparent);
+
+/* prettylights-syntax-constant */
+@include text-neonsign(".hljs-attr", #79c0ff, normal, normal, transparent);
+@include text-neonsign(".hljs-attribute", #79c0ff, normal, normal, transparent);
+@include text-neonsign(".hljs-literal", #79c0ff, normal, normal, transparent);
+@include text-neonsign(".hljs-meta", #79c0ff, normal, normal, transparent);
+@include text-neonsign(".hljs-number", #79c0ff, normal, normal, transparent);
+@include text-neonsign(".hljs-operator", #79c0ff, normal, normal, transparent);
+@include text-neonsign(".hljs-variable", #79c0ff, normal, normal, transparent);
+@include text-neonsign(".hljs-selector-attr", #79c0ff, normal, normal, transparent);
+@include text-neonsign(".hljs-selector-class", #79c0ff, normal, normal, transparent);
+@include text-neonsign(".hljs-selector-id", #79c0ff, normal, normal, transparent);
+
+/* prettylights-syntax-string */
+@include text-neonsign(".hljs-regexp", #a5d6ff, normal, normal, transparent);
+@include text-neonsign(".hljs-string", #a5d6ff, normal, normal, transparent);
+@include text-neonsign(".hljs-meta .hljs-string", #a5d6ff, normal, normal, transparent);
+
+/* prettylights-syntax-variable */
+@include text-neonsign(".hljs-built_in", #ffa657, normal, normal, transparent);
+@include text-neonsign(".hljs-symbol", #ffa657, normal, normal, transparent);
+
+/* prettylights-syntax-comment */
+@include text-neonsign(".hljs-comment", #8b949e, normal, normal, transparent);
+@include text-neonsign(".hljs-code", #8b949e, normal, normal, transparent);
+@include text-neonsign(".hljs-formula", #8b949e, normal, normal, transparent);
+
+/* prettylights-syntax-entity-tag */
+@include text-neonsign(".hljs-name", #7ee787, normal, normal, transparent);
+@include text-neonsign(".hljs-quote", #7ee787, normal, normal, transparent);
+@include text-neonsign(".hljs-selector-tag", #7ee787, normal, normal, transparent);
+@include text-neonsign(".hljs-selector-pseudo", #7ee787, normal, normal, transparent);
+
+/* prettylights-syntax-storage-modifier-import */
+@include text-neonsign(".hljs-subst", #c9d1d9, normal, normal, transparent);
+
+/* prettylights-syntax-markup-heading */
+@include text-neonsign(".hljs-section", #1f6feb, bold, normal, transparent);
+
+/* prettylights-syntax-markup-list */
+@include text-neonsign(".hljs-bullet", #f2cc60, normal, normal, transparent);
+
+/* prettylights-syntax-markup-italic */
+@include text-neonsign(".hljs-emphasis", #c9d1d9, normal, italic, transparent);
+
+/* prettylights-syntax-markup-bold */
+@include text-neonsign(".hljs-strong", #c9d1d9, bold, normal, transparent);
+
+/* prettylights-syntax-markup-inserted */
+@include text-neonsign(".hljs-addition", #aff5b4, normal, normal, #033a16);
+
+/* prettylights-syntax-markup-deleted */
+@include text-neonsign(".hljs-deletion", #ffdcd7, normal, normal, #67060c);
